@@ -1,10 +1,14 @@
-import Link from "next/link";
-export default function Navbar() {
+import { Nav } from "../Style";
+import { ReactNode } from "react";
+import {Image} from "../Image/Image";
+export default function Navbar({ children }: { children: ReactNode }) {
   return (
-    <nav>
-         <h1>Loja de vestuário</h1>
-   <Link href="/">Home</Link>
-   <Link href="pages/tickets">Tickets</Link>
-    </nav>
+    <>
+    <Nav>
+      
+        {children}
+  
+    </Nav>
+    </>
   );
 }

@@ -1,21 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Nunito } from "next/font/google";
+import Navbar from "./components/Navbar/Navbar";
 import "./globals.css";
 
 import Link from "next/link";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-const nunito= Nunito({
-  variable: "--font-nunito",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,10 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body
-        className={`${nunito.variable} antialiased`}
-      >
-    <Link href="/" >Início</Link>
+      <title>Lacrei Saúde</title>
+      <link rel="icon" href="../public/LS logo.png" />
+      <body>
+   
+
         {children}
       </body>
     </html>
