@@ -73,9 +73,8 @@ export const Link = styled.a`
     align-content: flex-start
     `;
 
-export const  = styled.div`
+export const ContainerColumn = styled.div`
     display: flex;
-   ContainerColumn
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
