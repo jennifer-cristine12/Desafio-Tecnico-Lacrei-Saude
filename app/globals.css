@@ -3,10 +3,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #018762;
+  /* botão */
+  --color-text-invert:#fff;
+  --color-background-accent: #018762;
+  --color-background-accent-hover: #007756;
+  --color-background-accent-pressed: #014d39;
+  --color-background-accent-disabled: #CFCFCF;
+  --color-border-hover:#29A480;
+  --color-border-pressed:#014C37;
+  --color-border-disabled:#CFCFCF;
+  /*erro / critical */
+  --color-background-error: #BC1C1C;
+  --color-background-error-hover: #9B1717;
+  --color-background-error-pressed: #791111;
+  --color-background-error-disabled: #FCE9E9;
+
   min-height: 48px;
   min-width: 48px;
 }
+
 
 @theme inline {
   --color-background: var(--background);
@@ -28,12 +43,4 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*
-button {
-  background-color: var(--primary);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}*/
+

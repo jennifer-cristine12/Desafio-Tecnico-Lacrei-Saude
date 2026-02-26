@@ -19,8 +19,6 @@ export default function RootLayout({
       <title>Lacrei Saúde</title>
       <link rel="icon" href="../public/LS logo.png" />
       <body>
-   
-
         {children}
       </body>
     </html>

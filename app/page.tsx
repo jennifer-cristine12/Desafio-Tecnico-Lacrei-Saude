@@ -1,35 +1,36 @@
 
-import Image from 'next/image'
+import Link from "./components/Text/Link";
 import H1Component from "./components/Text/H1";
+import {ContainerColumn, ContainerRow, Strong, Card} from "./components/Style";
 import ButtonPrimary from "./components/Button/ButtonPrimary";
-import ButtonSecondary from "./components/Button/ButtonSecondary";
+import Paragraph from "./components/Text/Paragraph";
 import Navbar from "./components/Navbar/Navbar";
 import NavContainer from "./components/Navbar/NavContainer";
+import BackgroundImage from "./components/BackgroundPage/BackgroundPage";
 export default function Inicio() {
   return (
-    <div>
+    <BackgroundImage >
 
       <Navbar>
         <NavContainer>
-        <Image
-              src="/../public/file.svg" 
-              alt="Logo da Lacrei Saúde"
-              width={50}
-              height={30}
-            />
-          <H1Component texto={"Lacrei Saúde"} />
+          <Link href="/Quem-somos" texto={"Quem somos"} />
+          <Link href="/" texto={"Ajuda"} />
+          <ButtonPrimary texto={"Entrar"} />
         </NavContainer>
-        
-        <NavContainer>
-          <ButtonPrimary texto={"Primary"} />
-          <ButtonSecondary texto={"Secondary"} />
-        </NavContainer>
-
-
-
-
       </Navbar>
+      <Card>
 
-    </div>
+<ContainerColumn>
+ <H1Component texto={"Olá, você está na Lacrei Saúde"} />
+<Paragraph>Conectamos pessoas <Strong>LGBTQIAPN+</Strong>com profissionais de saúde qualificados, proprcionando experiencias de cuidado seguras e inclusivas</Paragraph>
+<ContainerRow>
+<ButtonPrimary texto={"Para pacientes"} />
+<ButtonPrimary texto={"Para profissionais"} />
+</ContainerRow>
+</ContainerColumn>
+      </Card>
+     
+      
+    </BackgroundImage>
   );
 }
