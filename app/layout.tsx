@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html >
       <title>Lacrei Saúde</title>
       <link rel="icon" href="../public/LS logo.png" />
       <body>
