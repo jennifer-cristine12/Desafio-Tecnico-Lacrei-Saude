@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Nunito } from "next/font/google";
+import img from "../images/bg-inicio.png"
+
 
 const nunito = Nunito({
     variable: "--font-nunito",
@@ -97,7 +99,7 @@ export const P = styled.p`
     `;
 export const Strong = styled.strong`
     font-weight: bold;
-    color: #000;
+    color: var(--color-text-heading);
     `;
 
 /* --- Variações de tamanho da fonte ---*/
@@ -107,10 +109,14 @@ export const Headlinexl = {
     lineHeight: "3rem",
     fontWeight: "bold",
 }
+interface InicioProps {
+    imgUrl: string;
+}
+
 export const Inicio = styled.div`
-background-image: url('./Image/bg-inicio.png');
+background-image: url(${img.src});
 background-size: cover;
 background-position: center;
 width: 100vw;
-height:100%;
+min-height:100vh;
 `;
