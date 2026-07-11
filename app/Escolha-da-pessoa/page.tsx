@@ -1,15 +1,15 @@
-import  Navbar  from "../components/Navbar/Navbar";
+import Navbar from "../components/Navbar";
 import Link from "next/link";
-import NavContainer from "../components/Navbar/NavContainer";
-import ButtonPrimary from "../components/Button/ButtonPrimary";
+import NavContainer from "../components/NavContainer";
+import ButtonPrimary from "../components/ButtonPrimary";
 export default function EscolhaDaPessoa() {
   return (
     <>
 
-    <div>
-      <h1>Escolha da Pessoa</h1>
-      <p>Esta é a página de escolha da pessoa.</p>
-    </div>
+      <div>
+        <h1>Escolha da Pessoa</h1>
+        <p>Esta é a página de escolha da pessoa.</p>
+      </div>
     </>
   );
 }
