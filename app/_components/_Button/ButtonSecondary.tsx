@@ -1,4 +1,4 @@
-import { BotaoSecondary } from "./Style";
+import { BotaoSecondary } from "../Style";
 export default function ButtonSecondary({ texto }: { texto: string }) {
     return (
         <>

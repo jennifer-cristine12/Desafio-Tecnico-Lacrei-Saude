@@ -1,12 +1,12 @@
 
-import Link from "./components/Link";
-import H1Component from "./components/H1";
-import { ContainerColumn, ContainerRow, Strong, Card } from "./components/Style";
-import ButtonPrimary from "./components/ButtonPrimary";
-import Paragraph from "./components/Paragraph";
-import Navbar from "./components/Navbar";
-import NavContainer from "./components/NavContainer";
-import BackgroundImage from "./components/BackgroundPage";
+import Link from "./_components/_Text/Link";
+import H1Component from "./_components/_Text/H1";
+import { ContainerColumn, ContainerRow, Strong, Card } from "./_components/Style";
+import ButtonPrimary from "./_components/_Button/ButtonPrimary";
+import Paragraph from "./_components/_Text/Paragraph";
+import Navbar from "./_components/Navbar";
+import NavContainer from "./_components/NavContainer";
+import BackgroundImage from "./_components/BackgroundPage";
 export default function Inicio() {
   return (
     <BackgroundImage >
@@ -14,7 +14,7 @@ export default function Inicio() {
       <Navbar>
         <NavContainer>
           <Link href="/Quem-somos" texto={"Quem somos"} />
-          <Link href="/" texto={"Ajuda"} />
+          <Link href="/Ajuda" texto={"Ajuda"} />
           <ButtonPrimary texto={"Entrar"} />
         </NavContainer>
       </Navbar>

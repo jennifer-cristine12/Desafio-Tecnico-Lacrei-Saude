@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Nunito } from "next/font/google";
-import img from "../images/bg-inicio.png"
+import img from "../_images/bg-inicio.png"
 
 
 const nunito = Nunito({
@@ -66,7 +66,7 @@ export const Link = styled.a`
     margin: 0.5rem;
     font-weight:bold;
     `;
-    export const Card = styled.div`
+export const Card = styled.div`
     display:flex;
     margin-left:30px;
     width:30%;

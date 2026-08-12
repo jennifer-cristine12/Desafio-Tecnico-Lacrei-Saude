@@ -1,7 +1,7 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../_components/Navbar";
 import Link from "next/link";
-import NavContainer from "../components/NavContainer";
-import ButtonPrimary from "../components/ButtonPrimary";
+import NavContainer from "../_components/NavContainer";
+import ButtonPrimary from "../_components/_Button/ButtonPrimary";
 export default function EscolhaDaPessoa() {
   return (
     <>
