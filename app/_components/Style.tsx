@@ -1,14 +1,47 @@
 import styled from "styled-components";
 import { Nunito } from "next/font/google";
-import img from "../_images/bg-inicio.png"
 
 
-const nunito = Nunito({
+interface Props {
+    $imgUrl: string;
+}
+interface AccordionProps {
+    hidden: boolean;
+}
+export const nunito = Nunito({
     variable: "--font-nunito",
     subsets: ["latin"],
 });
+/*Accordion*/
+export const AccordionContainer = styled.div`
+    display:flex;
+    flex-direction:column;
+    height: 48px;
+    margin: 32px;
+    max-width:546px;
+    min-width:327px;
+`
+export const AccordionHeader = styled.div`
+        font-family: ${nunito.style.fontFamily}, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-weight: bold;  
+        color: var(--color-foreground);
+        display:flex;
+        cursor:pointer;
+        border-bottom: 1px solid var(--color-foreground);
+        justify-content:space-between;
+
+        `
 
 
+export const AccordionContent = styled.div<AccordionProps>`
+    display: ${AccordionProps => AccordionProps.hidden ? 'none' : 'block'};
+    color: var(--color-foreground) !important;
+    margin-top: 16px;
+   
+
+`
+/* Buttons */
 export const BotaoPrimary = styled.button`
     background-color: var(--color-background-accent);
     color: white;
@@ -28,6 +61,15 @@ export const BotaoSecondary = styled.button`
     border-radius: 0.25rem;
     box-shadow: 0 2px 4px rgba(27, 18, 18, 0.3);
     border: 2px solid var(--color-background-accent);
+`;
+
+/*Background */
+export const Background = styled.div<Props>`
+    background-image: url(${props => props.$imgUrl});
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    min-height:100vh;
 `;
 export const Nav = styled.nav`
     display: flex;
@@ -113,10 +155,3 @@ interface InicioProps {
     imgUrl: string;
 }
 
-export const Inicio = styled.div`
-background-image: url(${img.src});
-background-size: cover;
-background-position: center;
-width: 100vw;
-min-height:100vh;
-`;

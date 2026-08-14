@@ -7,9 +7,11 @@ import Paragraph from "./_components/_Text/Paragraph";
 import Navbar from "./_components/Navbar";
 import NavContainer from "./_components/NavContainer";
 import BackgroundImage from "./_components/BackgroundPage";
+import bgHome from "./_images/bg-home.png"
+import Accordion from "./_components/_Accordion/Accordion";
 export default function Inicio() {
   return (
-    <BackgroundImage >
+    <BackgroundImage $imgUrl={bgHome.src}>
 
       <Navbar>
         <NavContainer>
@@ -19,7 +21,6 @@ export default function Inicio() {
         </NavContainer>
       </Navbar>
       <Card>
-
         <ContainerColumn>
           <H1Component texto={"Olá, você está na Lacrei Saúde!"} />
           <Paragraph>Conectamos pessoas <Strong>LGBTQIAPN+</Strong>com profissionais de saúde qualificados, proprcionando experiencias de cuidado seguras e inclusivas</Paragraph>
@@ -29,6 +30,9 @@ export default function Inicio() {
           </ContainerRow>
         </ContainerColumn>
       </Card>
+      <Accordion HeaderText="Acordion ">
+        <Paragraph>Accordion content goes here</Paragraph>
+      </Accordion>
 
 
     </BackgroundImage>

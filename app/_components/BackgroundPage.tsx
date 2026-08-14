@@ -1,8 +1,17 @@
-import { Inicio } from "./Style";
-export default function BackgroundImage({ children }: { children: React.ReactNode }) {
+import { Background } from "./Style";
+import bgHome from "../_images/bg-home.png"
+interface BackgroundImageProps {
+    children: React.ReactNode;
+    $imgUrl?: string;
+}
+export default function BackgroundImage({
+    children,
+    $imgUrl,
+}: BackgroundImageProps) {
     return (
-        <Inicio>
+        <Background $imgUrl={$imgUrl || bgHome.src}>
             {children}
-        </Inicio >
+        </Background >
+
     );
 }
