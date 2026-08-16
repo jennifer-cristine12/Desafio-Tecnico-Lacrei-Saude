@@ -1,36 +1,44 @@
 
-import Link from "./components/Text/Link";
-import H1Component from "./components/Text/H1";
-import {ContainerColumn, ContainerRow, Strong, Card} from "./components/Style";
-import ButtonPrimary from "./components/Button/ButtonPrimary";
-import Paragraph from "./components/Text/Paragraph";
-import Navbar from "./components/Navbar/Navbar";
-import NavContainer from "./components/Navbar/NavContainer";
-import BackgroundImage from "./components/BackgroundPage/BackgroundPage";
+import Link from "./_components/_Text/Link";
+import H1Component from "./_components/_Text/H1";
+import { ContainerColumn, ContainerRow, Strong, Card } from "./_components/Style";
+import ButtonPrimary from "./_components/_Button/ButtonPrimary";
+import Paragraph from "./_components/_Text/Paragraph";
+import Navbar from "./_components/Navbar";
+import NavContainer from "./_components/NavContainer";
+import BackgroundImage from "./_components/BackgroundPage";
+import bgHome from "./_images/bg-home.png"
+import Accordion from "./_components/_Accordion/Accordion";
+import Avatar from "./_components/_Avatar/Avatar";
 export default function Inicio() {
   return (
-    <BackgroundImage >
+    <BackgroundImage $imgUrl={bgHome.src}>
 
       <Navbar>
         <NavContainer>
           <Link href="/Quem-somos" texto={"Quem somos"} />
-          <Link href="/" texto={"Ajuda"} />
+          <Link href="/Ajuda" texto={"Ajuda"} />
           <ButtonPrimary texto={"Entrar"} />
         </NavContainer>
       </Navbar>
       <Card>
-
-<ContainerColumn>
- <H1Component texto={"Olá, você está na Lacrei Saúde!"} />
-<Paragraph>Conectamos pessoas <Strong>LGBTQIAPN+</Strong>com profissionais de saúde qualificados, proprcionando experiencias de cuidado seguras e inclusivas</Paragraph>
-<ContainerRow>
-<ButtonPrimary texto={"Para pacientes"} />
-<ButtonPrimary texto={"Para profissionais"} />
-</ContainerRow>
-</ContainerColumn>
+        <ContainerColumn>
+          <H1Component texto={"Olá, você está na Lacrei Saúde!"} />
+          <Paragraph>Conectamos pessoas <Strong>LGBTQIAPN+</Strong>com profissionais de saúde qualificados, proprcionando experiencias de cuidado seguras e inclusivas</Paragraph>
+          <ContainerRow>
+            <ButtonPrimary texto={"Para pacientes"} />
+            <ButtonPrimary texto={"Para profissionais"} />
+          </ContainerRow>
+        </ContainerColumn>
       </Card>
-     
-      
+      <Avatar imgUrl={bgHome.src} />
+      {/*
+      <Accordion HeaderText="Acordion ">
+        <Paragraph>Accordion content goes here</Paragraph>
+      </Accordion>
+        */}
+
+
     </BackgroundImage>
   );
 }

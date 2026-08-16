@@ -1,10 +1,10 @@
 import { H1 } from "../Style";
 export default function H1Component({ texto }: { texto: string }) {
-    return(
+    return (
         <>
-        <H1>
-            {texto}
-        </H1>
+            <H1>
+                {texto}
+            </H1>
         </>
     )
 }
