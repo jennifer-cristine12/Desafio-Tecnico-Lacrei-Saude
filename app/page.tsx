@@ -9,6 +9,7 @@ import NavContainer from "./_components/NavContainer";
 import BackgroundImage from "./_components/BackgroundPage";
 import bgHome from "./_images/bg-home.png"
 import Accordion from "./_components/_Accordion/Accordion";
+import Avatar from "./_components/_Avatar/Avatar";
 export default function Inicio() {
   return (
     <BackgroundImage $imgUrl={bgHome.src}>
@@ -30,9 +31,12 @@ export default function Inicio() {
           </ContainerRow>
         </ContainerColumn>
       </Card>
+      <Avatar imgUrl={bgHome.src} />
+      {/*
       <Accordion HeaderText="Acordion ">
         <Paragraph>Accordion content goes here</Paragraph>
       </Accordion>
+        */}
 
 
     </BackgroundImage>
