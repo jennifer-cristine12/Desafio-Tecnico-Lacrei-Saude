@@ -167,7 +167,7 @@ font-weight: bold;
 export const Card = styled.div`
 display: flex;
 margin-left: 30px;
-width: 30%;
+width: 50%;
 min-width:356px;
 max-width:540px;
 flex-wrap: wrap;
@@ -195,6 +195,7 @@ font-family: ${nunito.style.fontFamily}, Arial, Helvetica, sans-serif;
 color:#777;
 font-size: 1.4rem;
 font-weight: 600;
+margin-bottom: 10px;
 `;
 export const Strong = styled.strong`
 font-weight: bold;
@@ -205,7 +206,7 @@ margin:0;
 padding:0;
 border-radius: 8px;
 overflow:hidden;
-
+width: 50%;
 `
 /* --- Variações de tamanho da fonte ---*/
 

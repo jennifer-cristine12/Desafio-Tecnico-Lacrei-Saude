@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import foto from '../public/foto.png' // Alternativa: importação direta
 
-export default function Page({ foto }: { foto: string }) {
+export default function Page({ foto, alt, size }: { foto: string, alt: string, size: number }) {
   return (
     <Image
       src={foto} // Caminho relativo à pasta /public
-      alt="Descrição da foto"
-      width={450}
-      height={250}
+      alt={alt}
+      width={size}
+      height={size - 200}
     />
   )
 }

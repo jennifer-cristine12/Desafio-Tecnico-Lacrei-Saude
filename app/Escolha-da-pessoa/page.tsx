@@ -23,8 +23,6 @@ export default function EscolhaDaPessoa() {
             <ButtonPrimary texto={"Entrar"} />
           </NavContainer>
         </Navbar>
-
-
         <ContainerRow>
           <Card>
             <H1BlackComponent texto={"Junte-se à nossa comunidade"} />
@@ -36,7 +34,7 @@ export default function EscolhaDaPessoa() {
           </Card>
           <ContainerColumn>
             <RoundedCard>
-              <Image foto={Escolha.src} />
+              <Image foto={Escolha.src} alt={"Escolha da pessoa"} size={800} />
             </RoundedCard>
           </ContainerColumn>
         </ContainerRow>
