@@ -12,8 +12,8 @@ export default function Navbar({ children }: { children: ReactNode }) {
           <Image
             src={Logo}
             alt="Logo"
-            width={30}
-            height={30}
+            width={40}
+            height={40}
           />
           <H1Component texto={"Lacrei Saúde"} />
         </NavContainer>

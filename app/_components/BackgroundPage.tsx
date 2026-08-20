@@ -1,5 +1,5 @@
 import { Background } from "./Style";
-import bgHome from "../_images/bg-home.png"
+import bgBlank from "../_images/bg-blank.png"
 interface BackgroundImageProps {
     children: React.ReactNode;
     $imgUrl?: string;
@@ -9,7 +9,7 @@ export default function BackgroundImage({
     $imgUrl,
 }: BackgroundImageProps) {
     return (
-        <Background $imgUrl={$imgUrl || bgHome.src}>
+        <Background $imgUrl={$imgUrl || bgBlank.src}>
             {children}
         </Background >
 

@@ -3,8 +3,12 @@ import { Nunito } from "next/font/google";
 
 interface Props {
     $imgUrl: string;
+
 }
 interface AccordionProps {
+    hidden: boolean;
+}
+interface AvatarProps {
     hidden: boolean;
 }
 
@@ -51,29 +55,40 @@ export const AvatarImage = styled.div<Props>`
     background-size: cover;
     background-position: center;
     `
-export const AvatarExpanded = styled.figure`
+export const AvatarExpanded = styled.button`
     display:flex;
     align-items: center;
-    justify-itens:space-between;
+    justify-content:space-between;
     width:110px;
     padding: 10px 14px;
     overflow: hidden;
     background-color: var(--color-background);
     border-radius:8px;
+    &:focus{
+     background-color: var(--color-background-accent-focus);
+    }
     
     `
-export const ExpandArrow = styled.div<Props>`
+export const ExpandArrowButton = styled.div<Props>`
     display:flex;
     justify-content:center;
     width: 24px !important;
     height: 24px !important;
-    color:var(--color-background-accent);
     background-image: url(${props => props.$imgUrl});
     background-position: center;
     background-size: cover;
     margin-left: 10px;
     vertical-align: middle;
      
+    `
+export const ExpandPopOver = styled.div<AvatarProps>`
+      display: ${AvatarProps => AvatarProps.hidden ? 'none' : 'block'};
+    border: 1px solid var(--color-background);
+    border-radius: 0px 8px 8px 8px;
+    min-width:100px;
+    max-width:300px;
+    height: 50px;
+
     `
 
 /* Buttons */
@@ -110,7 +125,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 1rem;
-background-color: white;
+background-color:var(--color-background);
 width: 100vw;
 height: 10%;
 
@@ -123,11 +138,20 @@ gap: 1rem;
 `;
 export const H1 = styled.h1`
 font-family: ${nunito.style.fontFamily}, Arial, Helvetica, sans-serif;
-font-size: 2rem;
+font-size: 2.3rem;
 font-weight: bolder;
 color: var(--color-background-accent);
-margin-top: 1rem;
+margin: 1rem 0;
 `;
+export const H1Black = styled.h1`
+font-family: ${nunito.style.fontFamily}, Arial, Helvetica, sans-serif;
+font-size: 2.3rem;
+font-weight: bolder;
+color:#131313 !important;
+margin: 1rem 0;
+border-bottom: 1.6px solid var(--color-background-accent);
+`;
+
 export const Img = styled.img`
 width: 50px;
 height: 50px;
@@ -161,22 +185,28 @@ gap: 1rem;
 export const ContainerRow = styled.div`
 display: flex;
 flex-direction: row !important;
-align-itens:flex-start;
-justify-content: flex-start;
+justify-content: space-between;
+padding: 0 18px 0 0;
 flex-wrap: wrap;
 gap: 1rem;
 `;
 export const P = styled.p`
 font-family: ${nunito.style.fontFamily}, Arial, Helvetica, sans-serif;
 color:#777;
-font-size: 0.8rem;
+font-size: 1.4rem;
 font-weight: 600;
 `;
 export const Strong = styled.strong`
 font-weight: bold;
 color: var(--color-text-heading);
 `;
+export const RoundedCard = styled.div`
+margin:0;
+padding:0;
+border-radius: 8px;
+overflow:hidden;
 
+`
 /* --- Variações de tamanho da fonte ---*/
 
 export const Headlinexl = {

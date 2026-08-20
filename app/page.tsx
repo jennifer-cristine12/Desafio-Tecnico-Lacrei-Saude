@@ -24,19 +24,14 @@ export default function Inicio() {
       <Card>
         <ContainerColumn>
           <H1Component texto={"Olá, você está na Lacrei Saúde!"} />
-          <Paragraph>Conectamos pessoas <Strong>LGBTQIAPN+</Strong>com profissionais de saúde qualificados, proprcionando experiencias de cuidado seguras e inclusivas</Paragraph>
+          <Paragraph>Conectamos pessoas <Strong>LGBTQIAPN+</Strong> com profissionais de saúde qualificados, proprcionando experiencias de cuidado seguras e inclusivas</Paragraph>
           <ContainerRow>
             <ButtonPrimary texto={"Para pacientes"} />
             <ButtonPrimary texto={"Para profissionais"} />
           </ContainerRow>
         </ContainerColumn>
       </Card>
-      <Avatar imgUrl={bgHome.src} />
-      {/*
-      <Accordion HeaderText="Acordion ">
-        <Paragraph>Accordion content goes here</Paragraph>
-      </Accordion>
-        */}
+
 
 
     </BackgroundImage>

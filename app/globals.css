@@ -12,6 +12,7 @@
   --color-background-accent-hover: #007756;
   --color-background-accent-pressed: #014d39;
   --color-background-accent-disabled: #CFCFCF;
+  --color-background-accent-focus: #DFF2ED;
   --color-border-hover: #29A480;
   --color-border-pressed: #014C37;
   --color-border-disabled: #CFCFCF;
@@ -28,8 +29,8 @@
   --color-disabled: #cfcfcf;
 
   /*Texto*/
-  --color-text-body:
-    --color-text-heading: #131313;
+  --color-text-body: #131313;
+  --color-text-heading: #131313;
   --color-foreground: #171717;
   --color-text-invert: #fff;
 
